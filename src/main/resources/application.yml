@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/integration_testing_api_db
+    username: postgres
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+SECRET_KEY: "h!KKe@r@L6fg%*f198AA@12345678#QWEASDZXC"
+token:
+  expiration:
+    access: 300000 # в миллисекундах 5 минуты
+    refresh: 3600000 # в миллисекундах 1 час
+

@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+springBoot {
+    mainClass = 'com.azobioz.api.IntegrationTestingApplication'
+}
+
+group = 'com.azobioz.api'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.5.5'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.5.5'
+    implementation 'org.postgresql:postgresql:42.7.8'
+    implementation 'org.springframework.boot:spring-boot-starter-security:3.5.6'
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.7'
+    implementation 'org.projectlombok:lombok:1.18.40'
+
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.7'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.7'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
